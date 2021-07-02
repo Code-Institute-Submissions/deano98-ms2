@@ -14,3 +14,6 @@ The game will be a nod to the show and will appeal to fans, as well as everyone 
 * As a user, I'd like to be able to see the rules of the game
 * As a user, I want the site to be visually appealing and engaging to keep me interested
 * As a user, I want the game to be interactive and fun
+
+# Wireframes
+
