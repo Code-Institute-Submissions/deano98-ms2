@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header {
+    height: 75px;
+}
+
+.rules {
+    float: left;
+    width: 50%;
+}
+
+.best-of {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.header {
+    font-size: 150%;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+}
+
+.choices {
+    height: 300px;
+}
+
+.pick {
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 150px;
+}
+
+.choose-or-play {
+    width: 100%;
+    text-align: center;
+}
