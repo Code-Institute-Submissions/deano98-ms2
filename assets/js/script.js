@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            let actionChoice = this.getAttribute("data-type");
+            alert(`You clicked ${actionChoice}`)
+        })
+    }
+})
+
 function runGame() {
 
 }
@@ -29,4 +40,3 @@ function checkWinnerSpock() {
 function incrementScore() {
 
 }
-
