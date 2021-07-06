@@ -5,10 +5,30 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             let playerChoice = this.getAttribute("data-type");
             alert(`You clicked ${playerChoice}`);
-            runGame(playerChoice);
+            versus(playerChoice);
         })
     }
 })
+
+function versus(playerChoice) {
+    let picks = document.getElementsByClassName("pick");
+    
+    for (i = picks.length - 1; i >= 0; i--) {
+        picks[i].remove();
+    }
+
+    let playerAction = document.createElement("div");
+    let computerAction = document.createElement("div");
+
+    playerAction.classList.add("versus-one");
+    computerAction.classList.add("versus-two");
+
+    let choices = document.getElementById("choices");
+
+    choices.appendChild(playerAction);
+    choices.appendChild(computerAction);
+
+}
 
 function runGame(playerChoice) {
 
