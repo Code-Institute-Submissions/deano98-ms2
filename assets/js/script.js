@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("pick");
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
+/** Once the player has selected their move, all other selections 
+ * are removed to leave the players selection and a blank one for the computer */
 function versus(playerChoice) {
     let picks = document.getElementsByClassName("pick");
     
@@ -44,6 +46,9 @@ function versus(playerChoice) {
     countdown(playerChoice);
 }
 
+/** Starts a 3 second countdown timer, once it reaches 0 the computers selection
+ * is randomly picked and the winner is calculated
+ */
 function countdown(playerChoice) {
     let countdownTimer = document.getElementsByClassName("choose-or-play")[0];  
     let timer = 3; 
@@ -60,7 +65,9 @@ function countdown(playerChoice) {
         }
     }
 
-
+/** Randomly selects the computers selection, then runs the
+ * correct function based on the players selection
+ */
 function runGame(playerChoice) {
 
     let num1 = Math.floor(Math.random() * 5) + 1;
@@ -68,16 +75,25 @@ function runGame(playerChoice) {
 
     let computerChoice = "";
 
+    let computerAction = document.getElementsByClassName("versus-two")[0];
+    computerAction.classList.remove("versus-two");
+
     if (num1 === 1) {
-        computerChoice = "computerRock";
+        computerChoice = "computerRock";        
+        computerAction.classList.add("rock-two");
     } else if (num1 === 2) {
         computerChoice = "computerPaper";
+        computerAction.classList.add("paper-two");
     } else if (num1 === 3) {
         computerChoice = "computerScissors";
+        computerAction.classList.add("rock-two");
     } else if (num1 === 4) {
         computerChoice = "computerLizard";
+        computerAction.classList.add("lizard-two");
     } else if (num1 === 5) {
         computerChoice = "computerSpock";
+        computerAction.classList.add("spock-two");
+
     }
     pickAction(playerChoice, computerChoice)
 }
@@ -96,6 +112,7 @@ function pickAction(playerChoice, computerChoice) {
     }
 }
 
+/** Checks the outcome of the game when the player has selected Rock */
 function checkWinnerRock(computerChoice) {
     if (computerChoice === "computerLizard" || computerChoice === "computerScissors") {
         console.log(`You win! Rock beats ${computerChoice}`);
@@ -106,6 +123,7 @@ function checkWinnerRock(computerChoice) {
     }
 }
 
+/** Checks the outcome of the game when the player has selected Paper */
 function checkWinnerPaper(computerChoice) {
     if (computerChoice === "computerRock" || computerChoice === "computerSpock") {
         console.log(`You win! Paper beats ${computerChoice}`);
@@ -116,6 +134,7 @@ function checkWinnerPaper(computerChoice) {
     }
 }
 
+/** Checks the outcome of the game when the played has selected Scissors */
 function checkWinnerScissors(computerChoice) {
     if (computerChoice === "computerPaper" || computerChoice === "computerLizard") {
         console.log(`You win! Scissors beats ${computerChoice}`);
@@ -126,6 +145,7 @@ function checkWinnerScissors(computerChoice) {
     }
 }
 
+/** Checks the outcome of the game when the player has selected Lizard */
 function checkWinnerLizard(computerChoice) {
     if (computerChoice === "computerPaper" || computerChoice === "computerSpock") {
         console.log(`You win! Lizard beats ${computerChoice}`);
@@ -136,6 +156,7 @@ function checkWinnerLizard(computerChoice) {
     }
 }
 
+/** Checks the outcome of the game when the player has selected Spock */
 function checkWinnerSpock(computerChoice) {
     if (computerChoice === "computerRock" || computerChoice === "computerScissors") {
         console.log(`You win! Spock beats ${computerChoice}`);
@@ -146,6 +167,11 @@ function checkWinnerSpock(computerChoice) {
     }
 }
 
-function incrementScore() {
+function incrementScorePlayer() {
+    let bestOf = document.getElementsByTagName("radio");
+    
+}
+
+function incrementScoreComputer() {
 
 }

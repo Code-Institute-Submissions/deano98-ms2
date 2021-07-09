@@ -6,6 +6,21 @@
 
 header {
     height: 75px;
+    width: 100%;
+}
+
+.score-one {
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 75px;
+}
+
+.score-two {
+    float: right;
+    width: 50%;
+    text-align: center;
+    height: 75px;
 }
 
 .rules {
@@ -105,7 +120,7 @@ header {
     margin: 0 10% 0 25%;
     text-align: center;
     height: 300px;
-    background-image: url(/assets/images/Paper.png);
+    background-image: url(/assets/images/Scissors.png);
 }
 
 .lizard-one {
@@ -114,7 +129,7 @@ header {
     margin: 0 10% 0 25%;
     text-align: center;
     height: 300px;
-    background-image: url(/assets/images/Paper.png);
+    background-image: url(/assets/images/Lizard.png);
 }
 
 .spock-one {
@@ -123,7 +138,52 @@ header {
     margin: 0 10% 0 25%;
     text-align: center;
     height: 300px;
+    background-image: url(/assets/images/Spock.png);
+}
+
+.rock-two {
+    float: right;
+    width: 15%;
+    margin: 0 25% 0 10%;
+    text-align: center;
+    height: 300px;
+    background-image: url(/assets/images/Rock.png);
+}
+
+.paper-two {
+    float: right;
+    width: 15%;
+    margin: 0 25% 0 10%;
+    text-align: center;
+    height: 300px;
     background-image: url(/assets/images/Paper.png);
+}
+
+.scissors-two {
+    float: right;
+    width: 15%;
+    margin: 0 25% 0 10%;
+    text-align: center;
+    height: 300px;
+    background-image: url(/assets/images/Scissors.png);
+}
+
+.lizard-two {
+    float: right;
+    width: 15%;
+    margin: 0 25% 0 10%;
+    text-align: center;
+    height: 300px;
+    background-image: url(/assets/images/Lizard.png);
+}
+
+.spock-two {
+    float: right;
+    width: 15%;
+    margin: 0 25% 0 10%;
+    text-align: center;
+    height: 300px;
+    background-image: url(/assets/images/Spock.png);
 }
 
 .versus-two {
