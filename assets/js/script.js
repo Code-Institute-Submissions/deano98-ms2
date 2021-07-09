@@ -41,7 +41,25 @@ function versus(playerChoice) {
     choices.appendChild(playerAction);
     choices.appendChild(computerAction);
 
+    countdown(playerChoice);
 }
+
+function countdown(playerChoice) {
+    let countdownTimer = document.getElementsByClassName("choose-or-play")[0];  
+    let timer = 3; 
+    countdownTimer.innerHTML = timer;
+
+    setInterval(updateTimer, 1000);
+
+    function updateTimer() {
+        timer--;
+        countdownTimer.innerHTML = timer;
+        if (timer === 0) {
+            runGame(playerChoice);
+        }
+        }
+    }
+
 
 function runGame(playerChoice) {
 
