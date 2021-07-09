@@ -20,7 +20,20 @@ function versus(playerChoice) {
     let playerAction = document.createElement("div");
     let computerAction = document.createElement("div");
 
-    playerAction.classList.add("versus-one");
+    console.log(playerChoice);
+
+    if (playerChoice === "rock") {
+        playerAction.classList.add("rock-one");
+    } else if (playerChoice === "paper") {
+        playerAction.classList.add("paper-one");
+    } else if (playerChoice === "scissors") {
+        playerAction.classList.add("scissors-one");
+    } else if (playerChoice === "lizard") {
+        playerAction.classList.add("lizard-one");
+    } else if (playerChoice === "spock") {
+        playerAction.classList.add("spock-one");
+    }
+
     computerAction.classList.add("versus-two");
 
     let choices = document.getElementById("choices");
