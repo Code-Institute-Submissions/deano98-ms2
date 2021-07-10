@@ -288,12 +288,18 @@ function youWin() {
 
     span.onclick = function() {
         document.getElementById("player-one-score").innerHTML = 0;
-        document.getElementById("player-two-score").innerHTML = 0;      
+        document.getElementById("player-two-score").innerHTML = 0; 
+        
+        let removePlayButton = document.getElementsByClassName("choose-or-play")[0];
+        removePlayButton.innerHTML = "<h2>Choose Your Move</h2>";
+
         modal.style.display = "none";
+
         document.getElementById("best-of-one").disabled = false;
         document.getElementById("best-of-three").disabled = false;
         document.getElementById("best-of-five").disabled = false;
-        playAgain();
+
+        clearBoard();
     }
 }
 
@@ -307,10 +313,15 @@ function youLose() {
     span.onclick = function() {
         document.getElementById("player-one-score").innerHTML = 0;
         document.getElementById("player-two-score").innerHTML = 0;
+
+        let removePlayButton = document.getElementsByClassName("choose-or-play")[0];
+        removePlayButton.innerHTML = "<h2>Choose Your Move</h2>";
+
         modal.style.display = "none";
+
         document.getElementById("best-of-one").disabled = false;
         document.getElementById("best-of-three").disabled = false;
         document.getElementById("best-of-five").disabled = false;
-        playAgain();
+        clearBoard();
     }
 }

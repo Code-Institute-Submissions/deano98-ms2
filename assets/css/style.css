@@ -9,6 +9,12 @@ header {
     width: 100%;
 }
 
+.title {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+}
+
 .score-one {
     float: left;
     width: 50%;
@@ -27,7 +33,7 @@ header {
     float: left;
     width: 50%;
     font-size: 150%;
-    padding: 10px 0 0 10px;;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -35,14 +41,8 @@ header {
     float: right;
     width: 50%;
     text-align: right;
-    font-size: 150%;
-}
-
-.header {
-    font-size: 150%;
-    text-align: center;
-    height: 150px;
-    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #choices {
@@ -197,6 +197,8 @@ header {
 
 .choose-or-play {
     width: 100%;
+    height: 150px;
+    line-height: 150px;
     text-align: center;
     margin-top: 75px;
     font-size: 150%;;
