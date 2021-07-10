@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * are removed to leave the players selection and a blank one for the computer */
 function versus(playerChoice) {
     let picks = document.getElementsByClassName("pick");
-    
+
     for (i = picks.length - 1; i >= 0; i--) {
         picks[i].remove();
     }
@@ -50,8 +50,8 @@ function versus(playerChoice) {
  * is randomly picked and the winner is calculated
  */
 function countdown(playerChoice) {
-    let countdownTimer = document.getElementsByClassName("choose-or-play")[0];  
-    let timer = 3; 
+    let countdownTimer = document.getElementsByClassName("choose-or-play")[0];
+    let timer = 3;
     countdownTimer.innerHTML = timer;
 
     let intervalTimer = setInterval(updateTimer, 1000);
@@ -63,8 +63,8 @@ function countdown(playerChoice) {
             clearInterval(intervalTimer);
             runGame(playerChoice);
         }
-        }
     }
+}
 
 /** Randomly selects the computers selection, then runs the
  * correct function based on the players selection
@@ -80,7 +80,7 @@ function runGame(playerChoice) {
     computerAction.classList.remove("versus-two");
 
     if (num1 === 1) {
-        computerChoice = "computerRock";        
+        computerChoice = "computerRock";
         computerAction.classList.add("rock-two");
     } else if (num1 === 2) {
         computerChoice = "computerPaper";
@@ -186,7 +186,7 @@ function incrementScorePlayer() {
     console.log(oldScore);
 
     playAgain();
-    
+
 }
 
 function incrementScoreComputer() {
@@ -208,9 +208,56 @@ function playAgain() {
     playElement.innerHTML = "";
     playElement.appendChild(playButton);
 
-    playButton.addEventListener("click", resetGame);
+    playButton.addEventListener("click", clearBoard);
 }
 
-function resetGame() {
-    
+function clearBoard() {
+    let choices = document.getElementById("choices");
+    while (choices.firstChild) {
+        choices.removeChild(choices.firstChild);
+    }
+    resetBoard();
+}
+
+function resetBoard() {
+    let choices = document.getElementById("choices");
+
+    let rock = document.createElement("button");
+    let paper = document.createElement("button");
+    let scissors = document.createElement("button");
+    let lizard = document.createElement("button");
+    let spock = document.createElement("button");
+
+    rock.classList.add("pick", "rock");
+    paper.classList.add("pick", "paper");
+    scissors.classList.add("pick", "scissors");
+    lizard.classList.add("pick", "lizard");
+    spock.classList.add("pick", "spock");
+
+    rock.setAttribute("data-type", "rock");
+    paper.setAttribute("data-type", "paper");
+    scissors.setAttribute("data-type", "scissors");
+    lizard.setAttribute("data-type", "lizard");
+    spock.setAttribute("data-type", "spock");
+
+    choices.appendChild(rock);
+    choices.appendChild(paper);
+    choices.appendChild(scissors);
+    choices.appendChild(lizard);
+    choices.appendChild(spock);
+
+    beginNextGame();
+}
+
+function beginNextGame() {
+    let buttons = document.getElementsByClassName("pick");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            let playerChoice = this.getAttribute("data-type");
+            alert(`You clicked ${playerChoice}`);
+            versus(playerChoice);
+        })
+    }
+
 }
