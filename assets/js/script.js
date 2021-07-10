@@ -116,10 +116,12 @@ function pickAction(playerChoice, computerChoice) {
 function checkWinnerRock(computerChoice) {
     if (computerChoice === "computerLizard" || computerChoice === "computerScissors") {
         console.log(`You win! Rock beats ${computerChoice}`);
+        incrementScorePlayer();
     } else if (computerChoice === "computerRock") {
         console.log("It's a Draw!");
     } else {
         console.log(`You lose! Rock loses to ${computerChoice}`);
+        incrementScoreComputer();
     }
 }
 
@@ -127,10 +129,12 @@ function checkWinnerRock(computerChoice) {
 function checkWinnerPaper(computerChoice) {
     if (computerChoice === "computerRock" || computerChoice === "computerSpock") {
         console.log(`You win! Paper beats ${computerChoice}`);
+        incrementScorePlayer();
     } else if (computerChoice === "computerPaper") {
         console.log("It's a Draw!");
     } else {
         console.log(`You lose! Paper loses to ${computerChoice}`);
+        incrementScoreComputer();
     }
 }
 
@@ -138,10 +142,12 @@ function checkWinnerPaper(computerChoice) {
 function checkWinnerScissors(computerChoice) {
     if (computerChoice === "computerPaper" || computerChoice === "computerLizard") {
         console.log(`You win! Scissors beats ${computerChoice}`);
+        incrementScorePlayer();
     } else if (computerChoice === "computerScissors") {
         console.log("It's a Draw!");
     } else {
         console.log(`You lose! Scissors loses to ${computerChoice}`);
+        incrementScoreComputer();
     }
 }
 
@@ -149,10 +155,12 @@ function checkWinnerScissors(computerChoice) {
 function checkWinnerLizard(computerChoice) {
     if (computerChoice === "computerPaper" || computerChoice === "computerSpock") {
         console.log(`You win! Lizard beats ${computerChoice}`);
+        incrementScorePlayer();
     } else if (computerChoice === "computerLizard") {
         console.log("It's a Draw!");
     } else {
         console.log(`You lose! Lizard loses to ${computerChoice}`);
+        incrementScoreComputer();
     }
 }
 
@@ -160,18 +168,29 @@ function checkWinnerLizard(computerChoice) {
 function checkWinnerSpock(computerChoice) {
     if (computerChoice === "computerRock" || computerChoice === "computerScissors") {
         console.log(`You win! Spock beats ${computerChoice}`);
+        incrementScorePlayer();
     } else if (computerChoice === "computerSpock") {
         console.log("It's a Draw!");
     } else {
         console.log(`You lose! Spock loses to ${computerChoice}`);
+        incrementScoreComputer();
     }
 }
 
 function incrementScorePlayer() {
     let bestOf = document.getElementsByTagName("radio");
+    let oldScore = parseInt(document.getElementById("player-one-score").innerText);
+
+    document.getElementById("player-one-score").innerText = ++oldScore;
+    console.log(oldScore);
     
 }
 
 function incrementScoreComputer() {
+    let bestOf = document.getElementsByTagName("radio");
+    let oldScore = parseInt(document.getElementById("player-two-score").innerText);
+
+    document.getElementById("player-two-score").innerText = ++oldScore;
+    console.log(oldScore);
 
 }
