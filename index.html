@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="rules">
@@ -24,24 +26,40 @@
         </div>
     </header>
     <section>
+        <div id="you-win" class="popup">
+            <div class="popup-content">
+                <span class="play-again">Play Again</span>
+                <p>CONGRATULATIONS! YOU WIN!</p>
+            </div>
+        </div>
+        <div id="you-lose" class="popup">
+            <div class="popup-content">
+                <span class="play-again">Play Again</span>
+                <p>BAD LUCK! YOU LOSE!</p>
+            </div>
+        </div>
+    </section>
+    <section>
         <div class="header">
             <h1>ROCK PAPER SCISSORS LIZARD SPOCK</h1>
         </div>
         <div class="score-one">
-            <h2>Player 1 Score:</h2><h2 id="player-one-score">0</h2>            
+            <h2>Player 1 Score:</h2>
+            <h2 id="player-one-score">0</h2>
         </div>
         <div class="score-two">
-            <h2>Player 2 Score:</h2><h2 id="player-two-score">0</h2>            
+            <h2>Player 2 Score:</h2>
+            <h2 id="player-two-score">0</h2>
         </div>
     </section>
     <section>
-      <div id="choices">
-        <button data-type="rock" class="pick rock"></button>
-        <button data-type="paper" class="pick paper"></button>
-        <button data-type="scissors" class="pick scissors"></button>
-        <button data-type="lizard" class="pick lizard"></button>
-        <button data-type="spock" class="pick spock"></button>
-      </div>
+        <div id="choices">
+            <button data-type="rock" class="pick rock"></button>
+            <button data-type="paper" class="pick paper"></button>
+            <button data-type="scissors" class="pick scissors"></button>
+            <button data-type="lizard" class="pick lizard"></button>
+            <button data-type="spock" class="pick spock"></button>
+        </div>
     </section>
     <section>
         <div class="choose-or-play">
@@ -51,4 +69,5 @@
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

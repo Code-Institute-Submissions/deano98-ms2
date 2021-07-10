@@ -91,7 +91,7 @@ function runGame(playerChoice) {
         computerAction.classList.add("paper-two");
     } else if (num1 === 3) {
         computerChoice = "computerScissors";
-        computerAction.classList.add("rock-two");
+        computerAction.classList.add("scissors-two");
     } else if (num1 === 4) {
         computerChoice = "computerLizard";
         computerAction.classList.add("lizard-two");
@@ -195,7 +195,7 @@ function incrementScorePlayer() {
 
     for (i = 0; i < bestOf.length; i++) {
         if (bestOf[i].checked && parseInt(bestOf[i].value) === oldScore) {
-            youLose();
+            youWin();
         } else {
             playAgain();
         }
@@ -280,11 +280,37 @@ function beginNextGame() {
 }
 
 function youWin() {
-    console.log("You Win!");
-    playAgain();
+
+    let modal = document.getElementById("you-win");
+    let span = document.getElementsByClassName("play-again")[0];
+
+    modal.style.display = "block";
+
+    span.onclick = function() {
+        document.getElementById("player-one-score").innerHTML = 0;
+        document.getElementById("player-two-score").innerHTML = 0;      
+        modal.style.display = "none";
+        document.getElementById("best-of-one").disabled = false;
+        document.getElementById("best-of-three").disabled = false;
+        document.getElementById("best-of-five").disabled = false;
+        playAgain();
+    }
 }
 
 function youLose() {
-    console.log("You Lose!");
-    playAgain();
+
+    let modal = document.getElementById("you-lose");
+    let span = document.getElementsByClassName("play-again")[1];
+
+    modal.style.display = "block";
+
+    span.onclick = function() {
+        document.getElementById("player-one-score").innerHTML = 0;
+        document.getElementById("player-two-score").innerHTML = 0;
+        modal.style.display = "none";
+        document.getElementById("best-of-one").disabled = false;
+        document.getElementById("best-of-three").disabled = false;
+        document.getElementById("best-of-five").disabled = false;
+        playAgain();
+    }
 }
