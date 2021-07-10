@@ -54,12 +54,13 @@ function countdown(playerChoice) {
     let timer = 3; 
     countdownTimer.innerHTML = timer;
 
-    setInterval(updateTimer, 1000);
+    let intervalTimer = setInterval(updateTimer, 1000);
 
     function updateTimer() {
         timer--;
         countdownTimer.innerHTML = timer;
         if (timer === 0) {
+            clearInterval(intervalTimer);
             runGame(playerChoice);
         }
         }
@@ -183,6 +184,8 @@ function incrementScorePlayer() {
 
     document.getElementById("player-one-score").innerText = ++oldScore;
     console.log(oldScore);
+
+    playAgain();
     
 }
 
@@ -193,4 +196,21 @@ function incrementScoreComputer() {
     document.getElementById("player-two-score").innerText = ++oldScore;
     console.log(oldScore);
 
+    playAgain();
+
+}
+
+function playAgain() {
+    let playButton = document.createElement("button");
+    playButton.innerHTML = "PLAY";
+    let playElement = document.getElementsByClassName("choose-or-play")[0];
+
+    playElement.innerHTML = "";
+    playElement.appendChild(playButton);
+
+    playButton.addEventListener("click", resetGame);
+}
+
+function resetGame() {
+    
 }
