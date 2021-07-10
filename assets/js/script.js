@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function versus(playerChoice) {
     let picks = document.getElementsByClassName("pick");
 
+    document.getElementById("best-of-one").disabled = true;
+    document.getElementById("best-of-three").disabled = true;
+    document.getElementById("best-of-five").disabled = true;
+
     for (i = picks.length - 1; i >= 0; i--) {
         picks[i].remove();
     }
@@ -120,6 +124,7 @@ function checkWinnerRock(computerChoice) {
         incrementScorePlayer();
     } else if (computerChoice === "computerRock") {
         console.log("It's a Draw!");
+        playAgain();
     } else {
         console.log(`You lose! Rock loses to ${computerChoice}`);
         incrementScoreComputer();
@@ -133,6 +138,7 @@ function checkWinnerPaper(computerChoice) {
         incrementScorePlayer();
     } else if (computerChoice === "computerPaper") {
         console.log("It's a Draw!");
+        playAgain();
     } else {
         console.log(`You lose! Paper loses to ${computerChoice}`);
         incrementScoreComputer();
@@ -146,6 +152,7 @@ function checkWinnerScissors(computerChoice) {
         incrementScorePlayer();
     } else if (computerChoice === "computerScissors") {
         console.log("It's a Draw!");
+        playAgain();
     } else {
         console.log(`You lose! Scissors loses to ${computerChoice}`);
         incrementScoreComputer();
@@ -159,6 +166,7 @@ function checkWinnerLizard(computerChoice) {
         incrementScorePlayer();
     } else if (computerChoice === "computerLizard") {
         console.log("It's a Draw!");
+        playAgain();
     } else {
         console.log(`You lose! Lizard loses to ${computerChoice}`);
         incrementScoreComputer();
@@ -172,6 +180,7 @@ function checkWinnerSpock(computerChoice) {
         incrementScorePlayer();
     } else if (computerChoice === "computerSpock") {
         console.log("It's a Draw!");
+        playAgain();
     } else {
         console.log(`You lose! Spock loses to ${computerChoice}`);
         incrementScoreComputer();
@@ -179,25 +188,33 @@ function checkWinnerSpock(computerChoice) {
 }
 
 function incrementScorePlayer() {
-    let bestOf = document.getElementsByTagName("radio");
+    let bestOf = document.getElementsByName("best_of");
     let oldScore = parseInt(document.getElementById("player-one-score").innerText);
 
     document.getElementById("player-one-score").innerText = ++oldScore;
-    console.log(oldScore);
 
-    playAgain();
-
+    for (i = 0; i < bestOf.length; i++) {
+        if (bestOf[i].checked && parseInt(bestOf[i].value) === oldScore) {
+            youLose();
+        } else {
+            playAgain();
+        }
+    }    
 }
 
 function incrementScoreComputer() {
-    let bestOf = document.getElementsByTagName("radio");
+    let bestOf = document.getElementsByName("best_of");
     let oldScore = parseInt(document.getElementById("player-two-score").innerText);
 
     document.getElementById("player-two-score").innerText = ++oldScore;
-    console.log(oldScore);
 
-    playAgain();
-
+    for (i = 0; i < bestOf.length; i++) {
+        if (bestOf[i].checked && parseInt(bestOf[i].value) === oldScore) {
+            youLose();
+        } else {
+            playAgain();
+        }
+    }    
 }
 
 function playAgain() {
@@ -260,4 +277,14 @@ function beginNextGame() {
         })
     }
 
+}
+
+function youWin() {
+    console.log("You Win!");
+    playAgain();
+}
+
+function youLose() {
+    console.log("You Lose!");
+    playAgain();
 }
