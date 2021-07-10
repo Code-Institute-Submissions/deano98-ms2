@@ -265,6 +265,12 @@ function playAgain() {
 }
 
 function clearBoard() {
+    let resultClear = document.getElementsByClassName("result")[0];
+    resultClear.innerHTML = "";
+
+    let removePlayButton = document.getElementsByClassName("choose-or-play")[0];
+    removePlayButton.innerHTML = "<h2>Choose Your Move</h2>";
+
     let choices = document.getElementById("choices");
     while (choices.firstChild) {
         choices.removeChild(choices.firstChild);
