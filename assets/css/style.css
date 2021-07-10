@@ -17,14 +17,22 @@ header {
 
 .score-one {
     float: left;
-    width: 50%;
+    width: 33%;
+    text-align: center;
+    height: 75px;
+}
+
+
+.result {
+    float: left;
+    width: 33%;
     text-align: center;
     height: 75px;
 }
 
 .score-two {
-    float: right;
-    width: 50%;
+    float: left;
+    width: 33%;
     text-align: center;
     height: 75px;
 }

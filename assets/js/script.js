@@ -119,70 +119,106 @@ function pickAction(playerChoice, computerChoice) {
 
 /** Checks the outcome of the game when the player has selected Rock */
 function checkWinnerRock(computerChoice) {
-    if (computerChoice === "computerLizard" || computerChoice === "computerScissors") {
-        console.log(`You win! Rock beats ${computerChoice}`);
+    let result = document.getElementsByClassName("result")[0];
+    if (computerChoice === "computerLizard") {
+        result.innerHTML = "Rock Crushes Lizard!";
         incrementScorePlayer();
-    } else if (computerChoice === "computerRock") {
-        console.log("It's a Draw!");
+    } else if (computerChoice === "computerScissors") {
+        result.innerHTML = "Rock Crushes Scissors!";
+        incrementScorePlayer();
+    }
+    else if (computerChoice === "computerRock") {
+        result.innerHTML = "It's A Draw!";
         playAgain();
+    } else if (computerChoice === "computerSpock") {
+        result.innerHTML = "Spock Vaporises Rock!";
+        incrementScoreComputer();        
     } else {
-        console.log(`You lose! Rock loses to ${computerChoice}`);
-        incrementScoreComputer();
+        result.innerHTML = "Paper Covers Rock!";
+        incrementScoreComputer(); 
     }
 }
 
 /** Checks the outcome of the game when the player has selected Paper */
 function checkWinnerPaper(computerChoice) {
-    if (computerChoice === "computerRock" || computerChoice === "computerSpock") {
-        console.log(`You win! Paper beats ${computerChoice}`);
+    let result = document.getElementsByClassName("result")[0];
+    if (computerChoice === "computerRock") {
+        result.innerHTML = "Paper Covers Rock!";
+        incrementScorePlayer();
+    } else if (computerChoice === "computerSpock") {
+        result.innerHTML = "Paper Disproves Spock!";
         incrementScorePlayer();
     } else if (computerChoice === "computerPaper") {
-        console.log("It's a Draw!");
+        result.innerHTML = "It's A Draw!";
         playAgain();
+    } else if (computerChoice === "computerScissors") {
+        result.innerHTML = "Scissors Cut Paper!";
+        incrementScoreComputer();
     } else {
-        console.log(`You lose! Paper loses to ${computerChoice}`);
+        result.innerHTML = "Lizard Eats Paper!";
         incrementScoreComputer();
     }
 }
 
 /** Checks the outcome of the game when the played has selected Scissors */
 function checkWinnerScissors(computerChoice) {
-    if (computerChoice === "computerPaper" || computerChoice === "computerLizard") {
-        console.log(`You win! Scissors beats ${computerChoice}`);
+    let result = document.getElementsByClassName("result")[0];
+    if (computerChoice === "computerPaper") {
+        result.innerHTML = "Scissors Cut Paper!";
+        incrementScorePlayer();
+    } else if (computerChoice === "computerLizard") {
+        result.innerHTML = "Scissors Decapitates Lizard!";
         incrementScorePlayer();
     } else if (computerChoice === "computerScissors") {
-        console.log("It's a Draw!");
+        result.innerHTML = "It's A Draw!";
         playAgain();
+    } else if (computerChoice === "computerSpock") {
+        result.innerHTML = "Spock Smashes Scissors!";
+        incrementScoreComputer();
     } else {
-        console.log(`You lose! Scissors loses to ${computerChoice}`);
+        result.innerHTML = "Rock Crushes Scissors!";
         incrementScoreComputer();
     }
 }
 
 /** Checks the outcome of the game when the player has selected Lizard */
 function checkWinnerLizard(computerChoice) {
-    if (computerChoice === "computerPaper" || computerChoice === "computerSpock") {
-        console.log(`You win! Lizard beats ${computerChoice}`);
+    let result = document.getElementsByClassName("result")[0];
+    if (computerChoice === "computerPaper") {
+        result.innerHTML = "Lizard Eats Paper!";
+        incrementScorePlayer();
+    } else if (computerChoice === "computerSpock") {
+        result.innerHTML = "Lizard Poisons Spock!";
         incrementScorePlayer();
     } else if (computerChoice === "computerLizard") {
-        console.log("It's a Draw!");
+        result.innerHTML = "It's A Draw!";
         playAgain();
+    } else if (computerChoice ==="computerScissors") {
+        result.innerHTML = "Scissors Decapitates Lizard!";
+        incrementScoreComputer();
     } else {
-        console.log(`You lose! Lizard loses to ${computerChoice}`);
+        result.innerHTML = "Rock Crushes Lizard!";
         incrementScoreComputer();
     }
 }
 
 /** Checks the outcome of the game when the player has selected Spock */
 function checkWinnerSpock(computerChoice) {
-    if (computerChoice === "computerRock" || computerChoice === "computerScissors") {
-        console.log(`You win! Spock beats ${computerChoice}`);
+    let result = document.getElementsByClassName("result")[0];
+    if (computerChoice === "computerRock") {
+        result.innerHTML = "Spock Vaporises Rock!";
+        incrementScorePlayer();
+    } else if (computerChoice === "computerScissors") {
+        result.innerHTML = "Spock Smashes Scissors!";
         incrementScorePlayer();
     } else if (computerChoice === "computerSpock") {
-        console.log("It's a Draw!");
+        result.innerHTML = "It's A Draw!";
         playAgain();
+    } else if (computerChoice === "computerLizard") {
+        result.innerHTML = "Lizard Poisons Spock!";
+        incrementScoreComputer();
     } else {
-        console.log(`You lose! Spock loses to ${computerChoice}`);
+        result.innerHTML = "Paper Disproves Spock!";
         incrementScoreComputer();
     }
 }
@@ -219,7 +255,7 @@ function incrementScoreComputer() {
 
 function playAgain() {
     let playButton = document.createElement("button");
-    playButton.innerHTML = "PLAY";
+    playButton.innerHTML = "Next Round";
     let playElement = document.getElementsByClassName("choose-or-play")[0];
 
     playElement.innerHTML = "";
