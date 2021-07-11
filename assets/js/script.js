@@ -259,6 +259,7 @@ function playAgain() {
     let playElement = document.getElementsByClassName("choose-or-play")[0];
 
     playElement.innerHTML = "";
+    playButton.classList.add("small-buttons");
     playElement.appendChild(playButton);
 
     playButton.addEventListener("click", clearBoard);
