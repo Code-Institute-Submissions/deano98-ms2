@@ -76,7 +76,7 @@ header {
 }
 
 .rock {
-    background-image: url(/assets/images/rock-final.png);
+    background-image: url(../images/rock-final.png);
     float: left;
     width: 15%;
     margin: 55px 2.5%;
@@ -86,7 +86,7 @@ header {
 }
 
 .paper {
-    background-image: url(/assets/images/paper-final.png);
+    background-image: url(../images/paper-final.png);
     float: left;
     width: 15%;
     margin: 55px 2.5%;
@@ -96,7 +96,7 @@ header {
 }
 
 .scissors {
-    background-image: url(/assets/images/scissors-final.png);
+    background-image: url(../images/scissors-final.png);
     float: left;
     width: 15%;
     margin: 55px 2.5%;
@@ -106,7 +106,7 @@ header {
 }
 
 .lizard {
-    background-image: url(/assets/images/lizard-final.png);
+    background-image: url(../images/lizard-final.png);
     float: left;
     width: 15%;
     margin: 55px 2.5%;
@@ -116,7 +116,7 @@ header {
 }
 
 .spock {
-    background-image: url(/assets/images/spock-final.png);
+    background-image: url(../images/spock-final.png);
     float: left;
     width: 15%;
     margin: 55px 2.5%;
@@ -131,7 +131,7 @@ header {
     margin: 55px 10% 55px 25%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/rock-final.png);
+    background-image: url(../images/rock-final.png);
     border-radius: 95px;
 }
 
@@ -141,7 +141,7 @@ header {
     margin: 55px 10% 55px 25%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/paper-final.png);
+    background-image: url(../images/paper-final.png);
     border-radius: 95px;
 }
 
@@ -151,7 +151,7 @@ header {
     margin: 55px 10% 55px 25%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/scissors-final.png);
+    background-image: url(../images/scissors-final.png);
     border-radius: 95px;
 }
 
@@ -161,7 +161,7 @@ header {
     margin: 55px 10% 55px 25%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/lizard-final.png);
+    background-image: url(../images/lizard-final.png);
     border-radius: 95px;
 }
 
@@ -171,7 +171,7 @@ header {
     margin: 55px 10% 55px 25%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/spock-final.png);
+    background-image: url(../images/spock-final.png);
     border-radius: 95px;
 }
 
@@ -181,7 +181,7 @@ header {
     margin: 55px 25% 55px 10%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/rock-final.png);
+    background-image: url(../images/rock-final.png);
     border-radius: 95px;
 }
 
@@ -191,7 +191,7 @@ header {
     margin: 55px 25% 55px 10%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/paper-final.png);
+    background-image: url(../images/paper-final.png);
     border-radius: 95px;
 }
 
@@ -201,7 +201,7 @@ header {
     margin: 55px 25% 55px 10%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/scissors-final.png);
+    background-image: url(../images/scissors-final.png);
     border-radius: 95px;
 }
 
@@ -211,7 +211,7 @@ header {
     margin: 55px 25% 55px 10%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/lizard-final.png);
+    background-image: url(../images/lizard-final.png);
     border-radius: 95px;
 }
 
@@ -221,7 +221,7 @@ header {
     margin: 55px 25% 55px 10%;
     text-align: center;
     height: 190px;
-    background-image: url(/assets/images/spock-final.png);
+    background-image: url(../images/spock-final.png);
     border-radius: 95px;
 }
 
@@ -232,7 +232,7 @@ header {
     text-align: center;
     height: 190px;
     border-radius: 95px;
-    background-image: url(/assets/images/blank.png);
+    background-image: url(../images/blank.png);
 }
 
 .choose-or-play {
