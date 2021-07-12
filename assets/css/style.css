@@ -18,6 +18,7 @@ header {
     width: 100%;
     text-align: center;
     font-size: 150%;
+    float: left;
 }
 
 .score-one {
@@ -26,7 +27,6 @@ header {
     text-align: center;
     height: 75px;
 }
-
 
 .result {
     float: left;
@@ -47,6 +47,7 @@ header {
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
+    height: 75px;
 }
 
 .small-buttons {
@@ -67,6 +68,7 @@ header {
     text-align: right;
     padding: 10px;
     box-sizing: border-box;
+    height: 75px;
 }
 
 #choices {
@@ -78,7 +80,7 @@ header {
 .rock {
     background-image: url(../images/rock-final.png);
     float: left;
-    width: 15%;
+    width: 180px;
     margin: 55px 2.5%;
     text-align: center;
     height: 190px;
@@ -88,7 +90,7 @@ header {
 .paper {
     background-image: url(../images/paper-final.png);
     float: left;
-    width: 15%;
+    width: 180px;
     margin: 55px 2.5%;
     text-align: center;
     height: 190px;
@@ -98,7 +100,7 @@ header {
 .scissors {
     background-image: url(../images/scissors-final.png);
     float: left;
-    width: 15%;
+    width: 180px;
     margin: 55px 2.5%;
     text-align: center;
     height: 190px;
@@ -108,7 +110,7 @@ header {
 .lizard {
     background-image: url(../images/lizard-final.png);
     float: left;
-    width: 15%;
+    width: 180px;
     margin: 55px 2.5%;
     text-align: center;
     height: 190px;
@@ -118,7 +120,7 @@ header {
 .spock {
     background-image: url(../images/spock-final.png);
     float: left;
-    width: 15%;
+    width: 180px;
     margin: 55px 2.5%;
     text-align: center;
     height: 190px;
@@ -238,10 +240,11 @@ header {
 .choose-or-play {
     width: 100%;
     height: 150px;
+    float: left;
     line-height: 150px;
     text-align: center;
     margin-top: 75px;
-    font-size: 150%;;
+    font-size: 150%;
 }
 
 .countdown {
@@ -255,69 +258,417 @@ header {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  .popup-content {
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; 
+    width: 50%;
     text-align: center;
     font-size: 150%;
-  }
+}
 
 .play-again {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .play-again:hover,
-  .play-again:focus {
+}
+
+.play-again:hover,
+.play-again:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .rules-text {
+.rules-text {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  .rules-content {
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.rules-content {
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; 
+    width: 50%;
     text-align: center;
     font-size: 150%;
-  }
+}
 
 .close-rules {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close-rules:hover,
-  .close-rules:focus {
+}
+
+.close-rules:hover,
+.close-rules:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #choices {
+        height: 150px;
+        width: 1000px;
+    }
+
+    .choose-or-play {
+        height: 75px;
+        line-height: 75px;
+        font-size: 100%;
+        margin-top: 50px;
+    }
+
+    .rock {
+        background-image: url(../images/rock-small.png);
+        width: 90px;
+        margin: 25px 5%;
+        height: 95px;
+        border-radius: 45px;
+    }
+
+    .paper {
+        background-image: url(../images/paper-small.png);
+        width: 90px;
+        margin: 25px 5%;
+        height: 95px;
+        border-radius: 45px;
+    }
+
+    .scissors {
+        background-image: url(../images/scissors-small.png);
+        width: 90px;
+        margin: 25px 5%;
+        height: 95px;
+        border-radius: 45px;
+    }
+
+    .lizard {
+        background-image: url(../images/lizard-small.png);
+        width: 90px;
+        margin: 25px 5%;
+        height: 95px;
+        border-radius: 45px;
+    }
+
+    .spock {
+        background-image: url(../images/spock-small.png);
+        width: 90px;
+        margin: 25px 5%;
+        height: 95px;
+        border-radius: 45px;
+    }
+
+    .rock-one {
+        width: 90px;
+        margin: 25px 10% 25px 25%;
+        height: 95px;
+        background-image: url(../images/rock-small.png);
+        border-radius: 45px;
+    }
+
+    .paper-one {
+        width: 90px;
+        margin: 25px 10% 25px 25%;
+        height: 95px;
+        background-image: url(../images/paper-small.png);
+        border-radius: 45px;
+    }
+
+    .scissors-one {
+        width: 90px;
+        margin: 25px 10% 25px 25%;
+        height: 95px;
+        background-image: url(../images/scissors-small.png);
+        border-radius: 45px;
+    }
+
+    .lizard-one {
+        width: 90px;
+        margin: 25px 10% 25px 25%;
+        height: 95px;
+        background-image: url(../images/lizard-small.png);
+        border-radius: 45px;
+    }
+
+    .spock-one {
+        width: 90px;
+        margin: 25px 10% 25px 25%;
+        height: 95px;
+        background-image: url(../images/spock-small.png);
+        border-radius: 45px;
+    }
+
+    .rock-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        background-image: url(../images/rock-small.png);
+        border-radius: 45px;
+    }
+
+    .paper-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        background-image: url(../images/paper-small.png);
+        border-radius: 45px;
+    }
+
+    .scissors-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        background-image: url(../images/scissors-small.png);
+        border-radius: 45px;
+    }
+
+    .lizard-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        background-image: url(../images/lizard-small.png);
+        border-radius: 45px;
+    }
+
+    .spock-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        background-image: url(../images/spock-small.png);
+        border-radius: 45px;
+    }
+
+    .versus-two {
+        width: 90px;
+        margin: 25px 25% 25px 10%;
+        height: 95px;
+        border-radius: 45px;
+        background-image: url(../images/blank-small.png);
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    #choices {
+        height: 150px;
+        width: 800px;
+    }
+
+    .choose-or-play {
+        height: 75px;
+        line-height: 75px;
+        font-size: 100%;
+        margin-top: 0px;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    .title {
+        height: 50px;
+        font-size: 75%;
+    }
+
+    .score-one {
+        height: 50px;
+        font-size: 75%;
+    }
+
+    .result {
+        height: 50px;
+        font-size: 100%;
+    }
+
+    .score-two {
+        height: 50px;
+        font-size: 75%;
+    }
+
+    .rules {
+        height: 50px;
+    }
+
+    .small-buttons {
+        font-size: 100%;
+    }
+
+    .best-of {
+        font-size: 75%;
+    }
+
+    .rock {
+        margin: 25px 4%;
+    }
+
+    .paper {
+        margin: 25px 4%;
+    }
+
+    .scissors {
+        margin: 25px 4%;
+    }
+
+    .lizard {
+        margin: 25px 4%;
+    }
+
+    .spock {
+        margin: 25px 4%;
+    }
+
+    .rock-one {
+        margin: 25px 10% 25px 25%;
+    }
+
+    .paper-one {
+        margin: 25px 10% 25px 25%;
+    }
+
+    .scissors-one {
+        margin: 25px 10% 25px 25%;
+    }
+
+    .lizard-one {
+        margin: 25px 10% 25px 25%;
+    }
+
+    .spock-one {
+        margin: 25px 10% 25px 25%;
+    }
+
+    .rock-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .paper-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .scissors-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .lizard-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .spock-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .versus-two {
+        margin: 25px 25% 25px 10%;
+    }
+
+    .rules-text {
+        font-size: 50%;
+
+    }
+
+    @media screen and (max-width: 750px) {
+        #choices {
+            height: 100px;
+            width: 600px;
+        }
+
+        .rock {
+            margin: 5px 2%;
+        }
+
+        .paper {
+            margin: 5px 2%;
+        }
+
+        .scissors {
+            margin: 5px 2%;
+        }
+
+        .lizard {
+            margin: 5px 2%;
+        }
+
+        .spock {
+            margin: 5px 2%;
+        }
+
+        .rock-one {
+            margin: 5px 10% 5px 25%;
+        }
+
+        .paper-one {
+            margin: 5px 10% 5px 25%;
+        }
+
+        .scissors-one {
+            margin: 5px 10% 5px 25%;
+        }
+
+        .lizard-one {
+            margin: 5px 10% 5px 25%;
+        }
+
+        .spock-one {
+            margin: 5px 10% 5px 25%;
+        }
+
+        .rock-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .paper-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .scissors-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .lizard-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .spock-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .versus-two {
+            margin: 5px 25% 5px 10%;
+        }
+
+        .score-one {
+            font-size: 50%;
+        }
+
+        .result {
+            font-size: 100%;
+        }
+
+        .score-two {
+            font-size: 50%;
+        }
+
+
+    }
+}

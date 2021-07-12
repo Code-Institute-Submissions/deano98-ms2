@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             let playerChoice = this.getAttribute("data-type");
             versus(playerChoice);
-        })
+        });
     }
-})
+});
 
 
 function rules() {
@@ -18,13 +18,13 @@ function rules() {
 
     closeRules.onclick = function () {
         rulesPopup.style.display = "none";
-    }
+    };
 
     window.onclick = function (event) {
         if (event.target == rulesPopup) {
             rulesPopup.style.display = "none";
         }
-    }
+    };
 }
 
 
@@ -37,7 +37,7 @@ function versus(playerChoice) {
     document.getElementById("best-of-three").disabled = true;
     document.getElementById("best-of-five").disabled = true;
 
-    for (i = picks.length - 1; i >= 0; i--) {
+    for (let i = picks.length - 1; i >= 0; i--) {
         picks[i].remove();
     }
 
@@ -117,7 +117,7 @@ function runGame(playerChoice) {
         computerAction.classList.add("spock-two");
 
     }
-    pickAction(playerChoice, computerChoice)
+    pickAction(playerChoice, computerChoice);
 }
 
 function pickAction(playerChoice, computerChoice) {
@@ -245,7 +245,7 @@ function incrementScorePlayer() {
 
     document.getElementById("player-one-score").innerText = ++oldScore;
 
-    for (i = 0; i < bestOf.length; i++) {
+    for (let i = 0; i < bestOf.length; i++) {
         if (bestOf[i].checked && parseInt(bestOf[i].value) === oldScore) {
             youWin();
         } else {
@@ -260,7 +260,7 @@ function incrementScoreComputer() {
 
     document.getElementById("player-two-score").innerText = ++oldScore;
 
-    for (i = 0; i < bestOf.length; i++) {
+    for (let i = 0; i < bestOf.length; i++) {
         if (bestOf[i].checked && parseInt(bestOf[i].value) === oldScore) {
             youLose();
         } else {
@@ -332,7 +332,7 @@ function beginNextGame() {
         button.addEventListener("click", function () {
             let playerChoice = this.getAttribute("data-type");
             versus(playerChoice);
-        })
+        });
     }
 
 }
@@ -358,7 +358,7 @@ function youWin() {
         document.getElementById("best-of-five").disabled = false;
 
         clearBoard();
-    }
+    };
 }
 
 function youLose() {
@@ -381,5 +381,5 @@ function youLose() {
         document.getElementById("best-of-three").disabled = false;
         document.getElementById("best-of-five").disabled = false;
         clearBoard();
-    }
+    };
 }
