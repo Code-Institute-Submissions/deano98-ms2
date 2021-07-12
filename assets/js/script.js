@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let playerChoice = this.getAttribute("data-type");
-            alert(`You clicked ${playerChoice}`);
             versus(playerChoice);
         })
     }
@@ -45,8 +44,6 @@ function versus(playerChoice) {
     let playerAction = document.createElement("div");
     let computerAction = document.createElement("div");
 
-    console.log(playerChoice);
-
     if (playerChoice === "rock") {
         playerAction.classList.add("rock-one");
     } else if (playerChoice === "paper") {
@@ -75,6 +72,7 @@ function versus(playerChoice) {
 function countdown(playerChoice) {
     let countdownTimer = document.getElementsByClassName("choose-or-play")[0];
     let timer = 3;
+    countdownTimer.classList.add("countdown");
     countdownTimer.innerHTML = timer;
 
     let intervalTimer = setInterval(updateTimer, 1000);
@@ -84,6 +82,7 @@ function countdown(playerChoice) {
         countdownTimer.innerHTML = timer;
         if (timer === 0) {
             clearInterval(intervalTimer);
+            countdownTimer.classList.remove("countdown");
             runGame(playerChoice);
         }
     }
@@ -95,7 +94,6 @@ function countdown(playerChoice) {
 function runGame(playerChoice) {
 
     let num1 = Math.floor(Math.random() * 5) + 1;
-    console.log(num1);
 
     let computerChoice = "";
 
