@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="rules">
-            <button data-type="rules" class="small-buttons">RULES</button>
+            <button data-type="rules" class="small-buttons" id="rules-button" onclick="rules()">RULES</button>
         </div>
         <div class="best-of">
             <h2>BEST OF</h2>
@@ -26,6 +26,24 @@
         </div>
     </header>
     <section>
+        <div id="rules-popup" class="rules-text">
+            <div class="rules-content">
+                <span class="close-rules">X</span>
+                <p>
+                    Scissors cuts Paper <br>
+                    Paper covers Rock <br>
+                    Rock crushes Lizard <br>
+                    Lizard poisons Spock <br>
+                    Spock smashes Scissors <br>
+                    Scissors decapitates Lizard <br>
+                    Lizard eats Paper <br>
+                    Paper disproves Spock <br>
+                    Spock vaporises Rock <br>
+                    And as it always has... <br>
+                    Rock crushes Scissors 
+                </p>
+            </div>
+        </div>
         <div id="you-win" class="popup">
             <div class="popup-content">
                 <span class="play-again">Play Again</span>

@@ -10,6 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
+
+function rules() {
+    let rulesPopup = document.getElementById("rules-popup");
+    let closeRules = document.getElementsByClassName("close-rules")[0];
+
+    rulesPopup.style.display = "block";
+
+    closeRules.onclick = function () {
+        rulesPopup.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == rulesPopup) {
+            rulesPopup.style.display = "none";
+        }
+    }
+}
+
+
 /** Once the player has selected their move, all other selections 
  * are removed to leave the players selection and a blank one for the computer */
 function versus(playerChoice) {
@@ -126,16 +145,15 @@ function checkWinnerRock(computerChoice) {
     } else if (computerChoice === "computerScissors") {
         result.innerHTML = "Rock Crushes Scissors!";
         incrementScorePlayer();
-    }
-    else if (computerChoice === "computerRock") {
+    } else if (computerChoice === "computerRock") {
         result.innerHTML = "It's A Draw!";
         playAgain();
     } else if (computerChoice === "computerSpock") {
         result.innerHTML = "Spock Vaporises Rock!";
-        incrementScoreComputer();        
+        incrementScoreComputer();
     } else {
         result.innerHTML = "Paper Covers Rock!";
-        incrementScoreComputer(); 
+        incrementScoreComputer();
     }
 }
 
@@ -193,7 +211,7 @@ function checkWinnerLizard(computerChoice) {
     } else if (computerChoice === "computerLizard") {
         result.innerHTML = "It's A Draw!";
         playAgain();
-    } else if (computerChoice ==="computerScissors") {
+    } else if (computerChoice === "computerScissors") {
         result.innerHTML = "Scissors Decapitates Lizard!";
         incrementScoreComputer();
     } else {
@@ -235,7 +253,7 @@ function incrementScorePlayer() {
         } else {
             playAgain();
         }
-    }    
+    }
 }
 
 function incrementScoreComputer() {
@@ -250,7 +268,7 @@ function incrementScoreComputer() {
         } else {
             playAgain();
         }
-    }    
+    }
 }
 
 function playAgain() {
@@ -329,10 +347,10 @@ function youWin() {
 
     modal.style.display = "block";
 
-    span.onclick = function() {
+    span.onclick = function () {
         document.getElementById("player-one-score").innerHTML = 0;
-        document.getElementById("player-two-score").innerHTML = 0; 
-        
+        document.getElementById("player-two-score").innerHTML = 0;
+
         let removePlayButton = document.getElementsByClassName("choose-or-play")[0];
         removePlayButton.innerHTML = "<h2>Choose Your Move</h2>";
 
@@ -353,7 +371,7 @@ function youLose() {
 
     modal.style.display = "block";
 
-    span.onclick = function() {
+    span.onclick = function () {
         document.getElementById("player-one-score").innerHTML = 0;
         document.getElementById("player-two-score").innerHTML = 0;
 
