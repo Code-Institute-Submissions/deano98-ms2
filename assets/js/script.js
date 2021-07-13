@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+/** Function to open the modal to display the rules, called when the rules button is clicked */
 function rules() {
     let rulesPopup = document.getElementById("rules-popup");
     let closeRules = document.getElementsByClassName("close-rules")[0];
@@ -120,6 +120,8 @@ function runGame(playerChoice) {
     pickAction(playerChoice, computerChoice);
 }
 
+/** Function to check the players choice, then call the correct
+ * function to calculate the winner */ 
 function pickAction(playerChoice, computerChoice) {
     if (playerChoice === "rock") {
         checkWinnerRock(computerChoice);
@@ -239,6 +241,10 @@ function checkWinnerSpock(computerChoice) {
     }
 }
 
+/** Increments the players score when a round is won, then checks if the score
+ * is high enough to win the game. If the score is high enough - call the win function, 
+ * otherwise call the play again function
+ */
 function incrementScorePlayer() {
     let bestOf = document.getElementsByName("best_of");
     let oldScore = parseInt(document.getElementById("player-one-score").innerText);
@@ -254,6 +260,10 @@ function incrementScorePlayer() {
     }
 }
 
+/** Increments the computers score when a round is lost, then checks if the score
+ * is high enough to lose the game. If the score is high enough - call the lose function, 
+ * otherwise call the play again function
+ */
 function incrementScoreComputer() {
     let bestOf = document.getElementsByName("best_of");
     let oldScore = parseInt(document.getElementById("player-two-score").innerText);
@@ -269,6 +279,9 @@ function incrementScoreComputer() {
     }
 }
 
+/** If the score has not yet met the requirement to win the game, insert a button
+ * to the DOM to reset the round, then call the clear board function.
+ */
 function playAgain() {
     let playButton = document.createElement("button");
     playButton.innerHTML = "Next Round";
@@ -281,6 +294,7 @@ function playAgain() {
     playButton.addEventListener("click", clearBoard);
 }
 
+/** Clears the board, then calls the reset board function */
 function clearBoard() {
     let resultClear = document.getElementsByClassName("result")[0];
     resultClear.innerHTML = "";
@@ -295,6 +309,7 @@ function clearBoard() {
     resetBoard();
 }
 
+/** Resets the board so it is ready for the next round  */
 function resetBoard() {
     let choices = document.getElementById("choices");
 
@@ -325,6 +340,9 @@ function resetBoard() {
     beginNextGame();
 }
 
+/** Adds the event listeners to the selection buttons again so the 
+ * player can choose their action
+ */
 function beginNextGame() {
     let buttons = document.getElementsByClassName("pick");
 
@@ -337,6 +355,10 @@ function beginNextGame() {
 
 }
 
+/** If the score conditions are met to win the game, open a modal
+ * to display that you are the winner, then call the clear board function
+ * when the modal is closed
+ */
 function youWin() {
 
     let modal = document.getElementById("you-win");
@@ -361,6 +383,10 @@ function youWin() {
     };
 }
 
+/** If the score conditions are met to lose the game, open a modal
+ * to display that you are the loser, then call the clear board function
+ * when the modal is closed
+ */
 function youLose() {
 
     let modal = document.getElementById("you-lose");
