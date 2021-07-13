@@ -17,22 +17,22 @@
 <body>
     <header>
         <div class="rules">
-            <button data-type="rules" class="small-buttons" id="rules-button" onclick="rules()">RULES</button>
+            <button data-type="rules" class="small-buttons" id="rules-button" onclick="rules()" aria-label="Rules">RULES</button>
         </div>
         <div class="best-of">
             <h2>BEST OF</h2>
-            <input type="radio" id="best-of-one" name="best_of" value="1" checked>
+            <input type="radio" id="best-of-one" name="best_of" value="1" aria-label="Best of 1 game" checked>
             <label for="best-of-one">1</label>
-            <input type="radio" id="best-of-three" name="best_of" value="2">
+            <input type="radio" id="best-of-three" name="best_of" value="2" aria-label="Best of 3 games">
             <label for="best-of-one">3</label>
-            <input type="radio" id="best-of-five" name="best_of" value="3">
+            <input type="radio" id="best-of-five" name="best_of" value="3" aria-label="Best of 5 games">
             <label for="best-of-one">5</label>
         </div>
     </header>
     <section>
         <div id="rules-popup" class="rules-text">
             <div class="rules-content">
-                <span class="close-rules">X</span>
+                <span class="close-rules" aria-label="Close rules">X</span>
                 <p>
                     Scissors cuts Paper <br>
                     Paper covers Rock <br>
@@ -79,11 +79,11 @@
     </section>
     <section>
         <div id="choices">
-            <button data-type="rock" class="pick rock"></button>
-            <button data-type="paper" class="pick paper"></button>
-            <button data-type="scissors" class="pick scissors"></button>
-            <button data-type="lizard" class="pick lizard"></button>
-            <button data-type="spock" class="pick spock"></button>
+            <button data-type="rock" class="pick rock" aria-label="Rock"></button>
+            <button data-type="paper" class="pick paper" aria-label="Paper"></button>
+            <button data-type="scissors" class="pick scissors" aria-label="Scissors"></button>
+            <button data-type="lizard" class="pick lizard" aria-label="Lizard"></button>
+            <button data-type="spock" class="pick spock" aria-label="Spock"></button>
         </div>
     </section>
     <section>
