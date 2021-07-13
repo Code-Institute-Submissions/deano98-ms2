@@ -14,10 +14,14 @@ Responsive design will be employed to provide a smooth experience on any device:
 
 * As a user, I want the site to be intuitive and easy to use
 * As a user, I'd like to be able to see the rules of the game
-* As a user, I want the site to be visually appealing and engaging to keep me interested
-* As a user, I want the game to be interactive and fun
+* As a user, I want the site to be visually appealing
+* As a user, I want the game to be interactive and engaging to keep me interested
 
 # Wireframes
+
+[Desktop](docs/wireframes/desktop.png)\
+[Tablet](docs/wireframes/tablet.png)\
+[Mobile](docs/wireframes/mobile.png)
 
 # Design
 
@@ -56,20 +60,40 @@ Responsive design will be employed to provide a smooth experience on any device:
 
 ### Code Validation
 
-[W3C Markup Validation](https://validator.w3.org/)
-[W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+[W3C Markup Validation](https://validator.w3.org/)\
+[W3C CSS Validation](https://jigsaw.w3.org/css-validator/)\
 [Beautify Tools Validation](https://beautifytools.com/javascript-validator.php)
 
 # Test Cases
 
 ### Testing User Stories
 
-* As a user, I want the site to be intuitive and easy to use
-* As a user, I'd like to be able to see the rules of the game
-* As a user, I want the site to be visually appealing and engaging to keep me interested
-* As a user, I want the game to be interactive and fun
+1. As a user, I want the site to be intuitive and easy to use
+  * The game is self explanatory, but there are instructions as you go along.
+  * The buttons to select your move are the eyecatching part of the site, you're invited to click them and then the game begins.
+  * Playing a round of the game is just 1 click.
+2. As a user, I'd like to be able to see the rules of the game
+  * The rules appear in a modal box when the rules button is pressed in the top left corner.
+  * The rules button stands out and is easy to see
+3. As a user, I want the site to be visually appealing
+  * The site is uncluttered and simple to be easy on the eye
+  * A navy blue colour is used against the white background to provide a good contrast
+  * The icons for the selections are clean and compelling, making the main part of the game eye-catching
+4. As a user, I want the game to be interactive and engaging to keep me interested
+  * Each stage of the round requires interaction from the player to continue
+  * The site has a 3 second countdown after the action is selecting to provide some dramatic effect.
+  * The outcome of each game is displayed on a modal box, providing more dramatic effect
+  * The player can select the number of rounds to play using a radio button
+
 
 ### Site Screenshots
+
+[Desktop](docs/screenshots/desktop.PNG)\
+[Desktop Rules](docs/screenshots/desktop-rules.PNG)\
+[Tablet](docs/screenshots/tablet.PNG)\
+[Tablet Rules](docs/screenshots/tablet-rules.PNG)\
+[Mobile](docs/screenshots/mobile.PNG)\
+[Mobile Rules](docs/screenshots/mobile-rules.PNG)
 
 ### Supported Devices
 
